@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto padrão</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<style>
+    /* Ícone e borda do menu hambúrguer em branco. */
+    .navbar-toggler {
+      border-color: #fff;
+      color: #fff;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .botao-entrar {
+      --bs-btn-bg: #fff;
+      --bs-btn-border-color: #fff;
+      --bs-btn-hover-bg: #f2f2f2;
+      --bs-btn-hover-border-color: #f2f2f2;
+      color: #212529;
+    }
+  </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-warning py-3 navbar-dark"
+       aria-label="Navegação principal">
+    <div class="container">
+
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="Logo da empresa" width="140">
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal"
+        aria-expanded="false"
+        aria-label="Alternar menu de navegação"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item">
+  <a class="nav-link active text-black" href="index.html"
+     aria-current="page">Home</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link text-black" href="recursos.html">Recursos</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link text-black" href="beneficios.html">Benefícios</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link text-black" href="precos.html">Preços</a>
+</li>
+<li class="nav-item mt-2 mt-lg-0">
+  <a class="btn botao-entrar text-black px-4" href="login.html">Entrar</a>
+</li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <main>
+  <section class="bg-warning text-white" aria-labelledby="titulo-principal">
+    <div class="container">
+      <div class="row align-items-center ">
+
+        <!-- Lado esquerdo -->
+        <div class="col-12 col-lg-6">
+          <h1 id="titulo-principal" class="display-5 fw-bold mb-3">
+            Suas contas descomplicadas
+          </h1>
+
+          <p class="lead mb-4">
+            Usado por mais de 1 milhão de pessoas, o Finans é uma
+            ferramenta online que vai facilitar sua vida financeira.
+          </p>
+
+          <!-- Interface de cadastro; conecte ao seu sistema de envio -->
+          <form onsubmit="event.preventDefault()">
+            <label for="email-cadastro" class="visually-hidden">
+              Seu e-mail
+            </label>
+
+            <div class="input-group mb-4">
+              <input
+                type="email"
+                class="form-control py-3"
+                id="email-cadastro"
+                name="email"
+                placeholder="Digite seu e-mail"
+                autocomplete="email"
+                required
+              >
+              <button type="submit" class="btn btn-primary px-3">
+                Cadastre-se
+              </button>
+            </div>
+          </form>
+
+          <div class="d-flex align-items-center gap-3">
+            <span>Disponível para</span>
+
+            <span role="img" aria-label="Android">
+              <i class="bi bi-android2 fs-2" aria-hidden="true"></i>
+            </span>
+
+            <span role="img" aria-label="Apple">
+              <i class="bi bi-apple fs-2" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Lado direito -->
+        <div class="col-12 col-lg-6 text-center">
+          <img
+            src="img/capa-mulher.png"
+            alt="Imagem provisória do Finans"
+            class="img-fluid"
+            width="600"
+            height="600"
+          >
+        </div>
+
+      </div>
+    </div>
+  </section>
+<section class="py-5 border-bottom" aria-labelledby="titulo-recursos">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Textos à esquerda -->
+      <div class="col-12 col-lg-6">
+        <h2 id="titulo-recursos" class="fw-bold mb-3">
+          Saiba para onde vai o seu dinheiro
+        </h2>
+
+        <p class="mb-4">
+          Com o Finans, você categoriza todos os seus lançamentos.
+          Com gráficos simples, você sabe de onde vem e para onde
+          vai o seu dinheiro.
+        </p>
+
+        <a href="recursos.html" class="btn btn-primary px-4">
+          Veja mais
+        </a>
+      </div>
+
+      <!-- Imagem PNG à direita: substitua o src depois -->
+      <div class="col-12 col-lg-6 text-center">
+        <img
+          src="img/saiba.png"
+          alt="Imagem provisória — visão dos lançamentos financeiros"
+          class="img-fluid rounded"
+          width="600"
+          height="400"
+          loading="lazy"
+        >
+      </div>
+
+    </div>
+  </div>
+</section>
+    <hr>
+    <section class="py-5 border-bottom" aria-labelledby="titulo-recursos">
+  <div class="container">
+    <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-6 text-center">
+        <img
+          src="img/juros.png"
+          alt="Imagem provisória — visão dos lançamentos financeiros"
+          class="img-fluid rounded"
+          width="600"
+          height="400"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- Textos à esquerda -->
+      <div class="col-12 col-lg-6">
+        <h2 id="titulo-recursos" class="fw-bold mb-3">
+          Pare de pagar juros e economize
+        </h2>
+
+        <p class="mb-4">
+          Manter as contas em dias é sempre um problema ? o Finans avisa você: receba aletas de contas a pagar e a receber!
+        </p>
+
+        <a href="recursos.html" class="btn btn-primary px-4">
+          Veja mais
+        </a>
+      </div>
+
+      <!-- Imagem PNG à direita: substitua o src depois -->
+      
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light" aria-label="Benefícios do Finans">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- Coluna 1 -->
+      <div class="col-12 col-md-4">
+        <img
+          src="img/facil.png"
+          alt=""
+          class="img-fluid rounded mb-4"
+          width="600"
+          height="400"
+          loading="lazy"
+        >
+
+        <h2 class="h4 fw-bold mb-3">Fácil de usar</h2>
+
+        <p class="mb-0">
+          O Finans vai além do básico e permite que você faça
+          controles incríveis, essenciais para suas finanças.
+          Simples como tem que ser.
+        </p>
+      </div>
+
+      <!-- Coluna 2 -->
+      <div class="col-12 col-md-4">
+        <img
+          src="img/economize.png"
+          alt=""
+          class="img-fluid rounded mb-4"
+          width="600"
+          height="400"
+          loading="lazy"
+        >
+
+        <h2 class="h4 fw-bold mb-3">Economize tempo</h2>
+
+        <p class="mb-0">
+          Tempo é dinheiro! Em segundos, você tem tudo sob controle
+          e aproveita o seu tempo com o que realmente importa para você!
+        </p>
+      </div>
+
+      <!-- Coluna 3 -->
+      <div class="col-12 col-md-4">
+        <img
+          src="img/suporte.png"
+          alt=""
+          class="img-fluid rounded mb-4"
+          width="600"
+          height="400"
+          loading="lazy"
+        >
+
+        <h2 class="h4 fw-bold mb-3">Suporte amigo</h2>
+
+        <p class="mb-0">
+          Dúvidas? Perguntas? Nosso suporte super legal ajuda você!
+          Estamos aqui para resolver seus problemas e deixar sua
+          vida bem mais fácil.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<footer class="py-4 border-top bg-warning text-white">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row
+                justify-content-between align-items-center gap-4">
+
+      <!-- Menus à esquerda -->
+      <nav aria-label="Navegação do rodapé">
+        <ul class="list-unstyled d-flex flex-wrap
+                   justify-content-center gap-4 mb-0">
+          <li>
+            <a href="index.html" class="text-black text-decoration-none">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="recursos.html" class="text-black text-decoration-none">
+              Recursos
+            </a>
+          </li>
+          <li>
+            <a href="beneficios.html" class="text-black text-decoration-none">
+              Benefícios
+            </a>
+          </li>
+          <li>
+            <a href="precos.html" class="text-black text-decoration-none">
+              Preços
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Redes sociais à direita: substitua pelos seus perfis -->
+      <div class="d-flex gap-3">
+        <a href="https://www.instagram.com/"
+           class="btn btn-outline-dark"
+           aria-label="Instagram"
+           target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-instagram fs-5" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://www.youtube.com/"
+           class="btn btn-outline-dark"
+           aria-label="YouTube"
+           target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-youtube fs-5" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://www.facebook.com/"
+           class="btn btn-outline-dark"
+           aria-label="Facebook"
+           target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-facebook fs-5" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
